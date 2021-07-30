@@ -59,7 +59,6 @@ def filter_transcribe_tweets(tweets, filter_language=None):
             'username' : tweet.username,
             'name'     : tweet.name,
             'place'    : tweet.place,
-            'timezone' : tweet.timezone,
             'photos'   : tweet.photos,
             'tweet'    : tweet.tweet,
             'likes'    : tweet.likes_count,
