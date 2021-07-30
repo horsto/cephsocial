@@ -1,4 +1,5 @@
 from pathlib import Path
+import datetime
 import twint
 
 
@@ -17,10 +18,11 @@ c.Media = True
 c.Search = '"octopus" AND "research" OR "science" -filter:replies -from:oct_network'
 c.Lang = 'en'
 c.Show_hashtags = True
-c.Since = '2021-06-01'
+
+last_week  =  datetime.datetime.now() - datetime.timedelta(days=7)
+c.Since = datetime.datetime.strftime(last_week, "%Y-%m-%d")
 c.Min_likes = 5
 c.Lang = 'en'
-c.Limit = 25
 c.Filter_retweets = True
 c.Store_object = True
 # Run search

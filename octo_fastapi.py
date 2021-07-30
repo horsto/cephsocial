@@ -1,4 +1,5 @@
 from pathlib import Path
+import datetime 
 import twint
 from typing import Optional
 from fastapi import FastAPI
@@ -84,8 +85,9 @@ def get_tomopteris_tweets():
     c.Search = 'tomopteris -filter:replies -from:tomopteris -@tomopteris'
     c.Lang = 'en'
     c.Show_hashtags = True
-    c.Since = '2021-06-01'
-    c.Min_likes = 5
+    last_week  =  datetime.datetime.now() - datetime.timedelta(days=7)
+    c.Since = datetime.datetime.strftime(last_week, "%Y-%m-%d")
+    c.Min_likes = 2
     c.Filter_retweets = True
     c.Store_object = True
 
@@ -106,8 +108,9 @@ def get_octo_tweets():
     # Define search and exclude some users
     c.Search = '"octopus" AND "research" OR "science" -filter:replies -from:oct_network'
     c.Show_hashtags = True
-    c.Since = '2021-06-01'
-    c.Min_likes = 5
+    last_week  =  datetime.datetime.now() - datetime.timedelta(days=7)
+    c.Since = datetime.datetime.strftime(last_week, "%Y-%m-%d")
+    c.Min_likes = 2
     c.Lang = 'en'
     c.Filter_retweets = True
     c.Store_object = True
