@@ -1,1 +1,0 @@
-{"id":"796358eb-4ddc-4225-975b-840c37f7af77","space":8156,"runtime":"python3.7","name":"fastapideta","path":"rn8pu9","project":"a01nblcf","account":"144798365827","region":"eu-central-1","deps":["fastapi","twint"],"envs":null,"public":true,"log_level":"debug","cron":""}

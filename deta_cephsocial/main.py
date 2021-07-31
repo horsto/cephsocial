@@ -1,8 +1,16 @@
-from pathlib import Path
-import datetime 
-import twint
-from typing import Optional
 from fastapi import FastAPI
+from importlib_metadata import PackageNotFoundError
+import datetime 
+
+
+TWINT_ERROR = None
+try:
+    import twint
+    HAS_TWINT = True
+except (ModuleNotFoundError, PackageNotFoundError) as e:
+    HAS_TWINT = False
+    TWINT_ERROR = e
+
 
 app = FastAPI()
 
@@ -75,6 +83,13 @@ def filter_transcribe_tweets(tweets, filter_language=None):
 @app.get("/")
 def read_root():
     return 'This is the octo fastAPI. Welcome!'
+
+@app.get("/check_twint")
+def twint_status():
+    if HAS_TWINT: 
+        return f'Twint found! {twint.__version__} | {twint.__file__}'
+    else:
+        return f'Twint not found. {TWINT_ERROR}'
 
 @app.get("/tweets/tomopteris")
 def get_tomopteris_tweets():

@@ -1,0 +1,1 @@
+{"id":"7db793d4-bb9c-4884-a127-46ad3a7a662a","space":8156,"runtime":"python3.7","name":"deta_cephsocial","path":"aa74xc","project":"a01nblcf","account":"144798365827","region":"eu-central-1","deps":["fastapi","importlib-metadata"],"envs":null,"public":true,"log_level":"debug","cron":""}
