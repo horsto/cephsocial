@@ -2,17 +2,16 @@ from fastapi import FastAPI
 from importlib_metadata import PackageNotFoundError
 import datetime 
 
+app = FastAPI()
 
 TWINT_ERROR = None
 try:
     import twint
     HAS_TWINT = True
-except (ModuleNotFoundError, PackageNotFoundError) as e:
+except BaseException as e:
     HAS_TWINT = False
     TWINT_ERROR = e
 
-
-app = FastAPI()
 
 ############ GENERAL SETTINGS #########################################################################
 # Filter key words in tweets 
