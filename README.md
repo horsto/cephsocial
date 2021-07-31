@@ -2,4 +2,4 @@
 ## Social Ceph
 https://flatgithub.com/horsto/cephsocial
 
-Powered by https://www.linode.com/ and https://octo.github.com/projects/flat-data
+Powered by [DETA](https://www.deta.sh/) and [Github flat data](https://octo.github.com/projects/flat-data)
