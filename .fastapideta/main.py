@@ -39,8 +39,7 @@ def filter_transcribe_tweets(tweets, filter_language=None):
 
     
     '''
-
-
+    
     #Transscribe essentials only
     all_tweets = {}
     for tweet in tweets:
