@@ -1,10 +1,8 @@
 [![data](https://github.com/horsto/cephsocial/actions/workflows/flat.yml/badge.svg?branch=main)](https://github.com/horsto/cephsocial/actions/workflows/flat.yml)
 
 ## SocialCeph
-Using github flat data actions to keep track of social media mentions of octopus research. <br>
-Currently keeps track of 
+Using github flat data actions to keep track of social media mentions of cephalopod (particularly octopus) research. <br>
 Open <b><a href="https://flatgithub.com/horsto/cephsocial" target="_blank">Flat Viewer</a></b>
-
 
 ---
 
